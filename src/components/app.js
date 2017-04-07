@@ -4,7 +4,7 @@ export default class App extends Component {
   render() {
     return (
       <div>
-        React simple starter
+        Govnet 2.0 - Shirka
           {this.props.children}
       </div>
     );

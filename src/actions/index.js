@@ -1,11 +1,27 @@
 import axios from 'axios';
 
-export const FETCH_POSTS = 'FETCH_POSTS';
-const ROOT_URL = 'http://reduxblog.herokuapp.com/api';
+export const FETCH_EVENTLIST = 'FETCH_EVENTLIST';
+const ROOT_URL = 'http://127.0.0.1:8000';
 const API_KEY = '?key=sometimeseveryoneneedscorrecthorsebatterystaple';
 export const CREATE_POST = 'CREATE_POST';
 export const FETCH_DETAIL = 'FETCH_DETAIL';
 export const DELETE_POST = 'DELETE_POST';
+
+
+
+export function fetchEventList() {
+
+    const request = axios.get(`${ROOT_URL}/eventlist/`);
+    return {
+        type: FETCH_EVENTLIST,
+        payload: request
+    };
+}
+
+
+
+
+
 
 export function fetchPosts() {
     const request = axios.get(`${ROOT_URL}/posts${API_KEY}`);

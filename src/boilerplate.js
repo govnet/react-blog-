@@ -17,3 +17,31 @@ class PostsShow extends Component {
 }
 
 export default PostsShow;
+
+
+renderEvents() {
+    return this.props.events.map((event) => {
+        return (
+            <tr key={event.confcode}>
+                <td >
+                    { event.name }
+                </td>
+                <td >
+                    { event.confcode}
+                </td>
+                <td >
+                    { event.date }
+                </td>
+                <td >
+                    { event.delegates}
+                </td>
+                <td >
+                    { event.division}
+                </td>
+
+
+            </tr>
+
+        );
+    })
+}
