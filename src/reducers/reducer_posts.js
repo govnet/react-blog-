@@ -1,7 +1,7 @@
 /**
  * Created by chris on 01/04/2017.
  */
-import { FETCH_POSTS, FETCH_DETAIL } from '../actions/index';
+import { FETCH_POSTS, FETCH_DETAIL, DELETE_POST } from '../actions/index';
 
 const INITIAL_STATE = {all : [],
     post: null
